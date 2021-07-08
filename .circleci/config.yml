@@ -18,6 +18,8 @@ jobs:
       # Checkout the code as the first step.
       - checkout
       # Use mvn clean and package as the standard maven build phase
+      -  run:
+          path: /bin/bash
       - run:
           name: Build
           command: mvn -B -DskipTests clean package
@@ -26,8 +28,7 @@ jobs:
           name: Test
           command: mvn test
    
- -  run:
-  path: /bin/bash
+ 
 
 workflows:
   # Below is the definition of your workflow.
