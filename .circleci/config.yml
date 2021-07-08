@@ -26,6 +26,8 @@ jobs:
           name: Test
           command: mvn test
    
+ -  run:
+  path: /bin/bash
 
 workflows:
   # Below is the definition of your workflow.
